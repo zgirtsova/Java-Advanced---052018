@@ -9,9 +9,7 @@ public class P03_DiagonalDifference {
     public static void main(String[] args) {
         int squareSize = Integer.parseInt(scanner.nextLine());
 
-        int[][] matrix = new int[squareSize][squareSize];
-
-        initializeMatrix(matrix);
+        int[][] matrix = initializeMatrix(squareSize);
 
         int difference = getDiagonalDifference(matrix);
 
@@ -21,19 +19,21 @@ public class P03_DiagonalDifference {
     private static int getDiagonalDifference(int[][] matrix) {
 
         int leftToRightSum = 0;
-        for (int size = 0; size < matrix.length; size++) {
-            leftToRightSum += matrix[size][size];
+        for (int i = 0; i < matrix.length; i++) {
+            leftToRightSum += matrix[i][i];
         }
 
         int rightToLeftSum = 0;
-        for (int size = 0; size < matrix.length; size++) {
-            rightToLeftSum += matrix[size][matrix.length - size - 1];
+        for (int i = 0; i < matrix.length; i++) {
+            rightToLeftSum += matrix[i][matrix.length - i - 1];
         }
 
         return Math.abs(leftToRightSum - rightToLeftSum);
     }
 
-    private static void initializeMatrix(int[][] matrix) {
+    private static int[][] initializeMatrix(int size) {
+        int[][] matrix = new int[size][size];
+
         for (int row = 0; row < matrix.length; row++) {
 
             int[] inputLineNumbers = Arrays.stream(scanner.nextLine().split("\\s+"))
@@ -43,5 +43,6 @@ public class P03_DiagonalDifference {
                 matrix[row][col] = inputLineNumbers[col];
             }
         }
+        return matrix;
     }
 }

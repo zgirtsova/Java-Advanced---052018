@@ -2,7 +2,6 @@ import java.util.*;
 
 public class P01_FillTheMatrix {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in).useLocale(Locale.ENGLISH);
         Scanner scanner = new Scanner(System.in);
 
         String[] input = scanner.nextLine().split(",\\s+");
@@ -12,9 +11,9 @@ public class P01_FillTheMatrix {
         int[][] matrix = new int[matrixSize][matrixSize];
 
         if (pattern.equals("A")) {
-            fillTheMatrixWithAPattern(matrix);
+            fillTheMatrixWithPatternA(matrix);
         } else {
-            fillTheMatrixWithBPattern(matrix);
+            fillTheMatrixWithPatternB(matrix);
         }
 
         printMatrix(matrix);
@@ -29,7 +28,7 @@ public class P01_FillTheMatrix {
         }
     }
 
-    private static void fillTheMatrixWithBPattern(int[][] matrix) {
+    private static void fillTheMatrixWithPatternB(int[][] matrix) {
         int number = 1;
         for (int row = 0; row < matrix.length; row++) {
             if (row % 2 == 0) {
@@ -44,7 +43,7 @@ public class P01_FillTheMatrix {
         }
     }
 
-    private static void fillTheMatrixWithAPattern(int[][] matrix) {
+    private static void fillTheMatrixWithPatternA(int[][] matrix) {
         int number = 1;
         for (int row = 0; row < matrix.length; row++) {
             for (int col = 0; col < matrix[row].length; col++) {

@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class P04_MaximalSum {
@@ -17,7 +16,7 @@ public class P04_MaximalSum {
         fillMatrixWithData(matrix);
 
         int[][] outputMatrix = new int[3][3];
-        int maxSum = getMaxSumOfElements(matrix, outputMatrix);
+        int maxSum = getMaxSumAndFillMatrix(matrix, outputMatrix);
 
         printResult(outputMatrix, maxSum);
     }
@@ -35,8 +34,11 @@ public class P04_MaximalSum {
         }
     }
 
-    private static int getMaxSumOfElements(int[][] matrix, int[][] outputMatrix) {
+    private static int getMaxSumAndFillMatrix(int[][] matrix, int[][] outputMatrix) {
         int maxSum = 0;
+        int bestRow = 0;
+        int bestCol = 0;
+
 
         for (int row = 0; row < matrix.length - 2; row++) {
             for (int col = 0; col < matrix[row].length - 2; col++) {
@@ -44,12 +46,14 @@ public class P04_MaximalSum {
 
                 if (currentSum > maxSum) {
                     maxSum = currentSum;
+                    bestCol = col;
+                    bestRow = row;
 
-                    fillSecondaryMatrix(matrix, outputMatrix, row, col);
+                   // fillSecondaryMatrix(matrix, outputMatrix, row, col);
                 }
             }
         }
-
+        fillSecondaryMatrix(matrix, outputMatrix, bestRow, bestCol);
         return  maxSum;
     }
 

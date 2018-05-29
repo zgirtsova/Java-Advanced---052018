@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class P10_BasixQueueOperations {
+public class P10_BasicQueueOperations {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
@@ -21,46 +21,28 @@ public class P10_BasixQueueOperations {
                 .mapToInt(Integer::parseInt).toArray();
 
         addElements(queue, nums, numsToAdd);
-
         removeElements(queue, numsToRemove);
 
-        boolean isPresent = checkIfNumIsPresent(queue, numToCheck);
-
-        if (isPresent) {
-            System.out.println("true");
+        //------------------------------
+        if (queue.isEmpty()) {
+            System.out.println("0");
             return;
         }
-
-        int minNum = getMinNumberInQueue(queue);
-        System.out.println(minNum);
-    }
-
-    private static int getMinNumberInQueue(ArrayDeque<Integer> queue) {
-        if (queue.isEmpty()) {
-            return 0;
-        }
-
         int min = Integer.MAX_VALUE;
 
         for (Integer num : queue) {
-            if (num < min) {
-                min = num;
-            }
-        }
-
-        return min;
-    }
-
-    private static boolean checkIfNumIsPresent(ArrayDeque<Integer> queue, int numToCheck) {
-        for (Integer num : queue) {
             if (num == numToCheck) {
-                return true;
+                System.out.println("true");
+                return;
+            } else if (num <= min) {
+                min = queue.poll();
+            } else {
+                queue.poll();
             }
         }
+        System.out.println(min);
 
-        return false;
     }
-
     private static void removeElements(ArrayDeque<Integer> queue, int numsToRemove) {
         for (int i = 0; i < numsToRemove; i++) {
             queue.poll();

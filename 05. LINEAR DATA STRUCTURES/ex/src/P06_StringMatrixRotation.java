@@ -74,7 +74,8 @@ public class P06_StringMatrixRotation {
 
         for (int row = 0; row < input.size(); row++) {
             Arrays.fill(matrix[row], ' ');
-            System.arraycopy(input.get(row).toCharArray(), 0, matrix[row], 0, input.get(row).length());
+            System.arraycopy(input.get(row).toCharArray(), 0,
+                                             matrix[row], 0, input.get(row).length());
         }
 
         return matrix;

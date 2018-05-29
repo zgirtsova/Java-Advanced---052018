@@ -22,21 +22,27 @@ public class P08_BasicStackOperations {
         removeFromStack(stack, numbersToPop);
 
         //find if numberToCheck is present or print the smallest num
-        printResult(stack, numbers, numbersToPush, numbersToPop, numberToCheck);
+        System.out.println(printResult(stack, numberToCheck));
     }
 
-    private static void printResult(ArrayDeque<Integer> stack, int[] numbers, int numbersToPush, int numbersToPop, int numberToCheck) {
-        boolean isPresent = numberIsPresent(stack, numberToCheck);
-        if (isPresent) {
-            System.out.println("true");
-            return;
-        }
+    private static String printResult(ArrayDeque<Integer> stack, int numberToCheck) {
 
-        stack.clear();
-        fillStack(stack, numbers, numbersToPush);
-        removeFromStack(stack, numbersToPop);
-        int smallestNumInStack = getSmallestNum(stack);
-        System.out.println(smallestNumInStack);
+        int smallest = Integer.MAX_VALUE;
+        boolean result = false;
+        if (stack.isEmpty()) {
+            return "0";
+        }
+        while (!stack.isEmpty()) {
+            if (stack.peek() == numberToCheck) {
+                return "true";
+            } else if (stack.peek() < smallest) {
+                smallest = stack.pop();
+            } else {
+                stack.pop();
+            }
+        }
+        return smallest + "";
+
     }
 
 
@@ -52,30 +58,4 @@ public class P08_BasicStackOperations {
         }
     }
 
-    private static int getSmallestNum(ArrayDeque<Integer> stack) {
-        int smallest = Integer.MAX_VALUE;
-        if (stack.isEmpty()) {
-            return 0;
-        }
-
-        while (!stack.isEmpty()) {
-            if (stack.peek() < smallest) {
-                smallest = stack.pop();
-            } else {
-                stack.pop();
-            }
-        }
-
-        return smallest;
-    }
-
-    private static boolean numberIsPresent(ArrayDeque<Integer> stack, int numberToCheck) {
-        while (!stack.isEmpty()) {
-            if (stack.pop() == numberToCheck) {
-                return true;
-            }
-        }
-
-        return false;
-    }
 }

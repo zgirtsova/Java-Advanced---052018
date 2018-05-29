@@ -1,38 +1,41 @@
-import java.util.ArrayDeque;
-import java.util.Arrays;
-import java.util.Locale;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
 
 public class P16_PoisonousPlants {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        int n = Integer.parseInt(scanner.nextLine());
-        int[] plants = Arrays.stream(scanner.nextLine().split("\\s+"))
-                .mapToInt(Integer::parseInt).toArray();
-
-        ArrayDeque<Integer> indexes = new ArrayDeque<>();
-        indexes.push(0);
-
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(reader.readLine());
+        String[] tokens = reader.readLine().split(" ");
+        int[] plants = new int[n];
+        for (int i = 0; i < n; i++) {
+            plants[i] = Integer.parseInt(tokens[i]);
+        }
+        Deque<Integer> indices = new ArrayDeque<>();
+        indices.push(0);
         int[] days = new int[n];
-
-        for (int i = 1 ; i < n; i++)
-        {
+        for (int i = 1; i < n; i++) {
             int maxDays = 0;
-            while (indexes.size() > 0 && plants[indexes.peek()] >= plants[i])
-            {
-                maxDays = Math.max(maxDays, days[indexes.pop()]);
+            while (!indices.isEmpty() && plants[indices.peek()] >= plants[i]) {
+                maxDays = Math.max(maxDays, days[indices.pop()]);
             }
-
-            if (indexes.size() > 0)
-            {
+            if (!indices.isEmpty()) {
                 days[i] = maxDays + 1;
             }
-
-            indexes.push(i);
+            indices.push(i);
         }
-
+        //System.out.println(getLastDay(days));
         System.out.println(Arrays.stream(days).max().getAsInt());
     }
 
+    private static int getLastDay(int[] days) {
+        int lastDay = 0;
+        for (int day : days) {
+            if (day > lastDay) {
+                lastDay = day;
+            }
+        }
+        return lastDay;
+    }
 }
