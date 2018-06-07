@@ -26,7 +26,7 @@ public class P11_ReplaceATag {
 
     private static String getReplacement(String match) {
         return match.replaceFirst("<a", "[URL")
-                .replaceFirst(">", "]")
-                .replaceFirst("</a>", "[/URL]");
+                    .replaceFirst(">", "]")
+                    .replaceFirst("</a>", "[/URL]");
     }
 }

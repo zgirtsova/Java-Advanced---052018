@@ -18,7 +18,7 @@ public class P14_SumOfAllValues {
         }
         String startKey = matcher.group("start");
         String endKey = matcher.group("end");
-        regex = String.format("%s(\\d*(\\.\\d+)?)%s", startKey, endKey);
+        regex = String.format("%s(\\d+(\\.\\d+)?)%s", startKey, endKey);
         pattern = Pattern.compile(regex);
         matcher = pattern.matcher(textString);
         double sum = 0D;

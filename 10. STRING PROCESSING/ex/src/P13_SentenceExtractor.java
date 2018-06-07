@@ -13,7 +13,7 @@ public class P13_SentenceExtractor {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(text);
         while (matcher.find()) {
-            System.out.println(matcher.group(0).trim());
+            System.out.println(matcher.group(0));
         }
     }
 }
