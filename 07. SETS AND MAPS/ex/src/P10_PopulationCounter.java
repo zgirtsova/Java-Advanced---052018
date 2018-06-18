@@ -28,7 +28,8 @@ public class P10_PopulationCounter {
                                                     .mapToLong(Long::valueOf)
                                                     .sum(),
                         Comparator.reverseOrder()))
-                .forEach(kvp -> {
+                .forEach(kvp ->
+                {
                     long totalPopulation = kvp.getValue()
                                                     .values()
                                                     .stream()
@@ -38,10 +39,13 @@ public class P10_PopulationCounter {
 
                     kvp.getValue().entrySet().stream()
                             .sorted(Comparator.comparing(Map.Entry::getValue, Comparator.reverseOrder()))
-                            .forEach(nestedKvp -> {
+                            .forEach(nestedKvp ->
+                            {
                                 sb.append(String.format("=>%s: %d%n", nestedKvp.getKey(), nestedKvp.getValue()));
-                            });
-                });
+                            }
+                    );
+                }
+        );
         System.out.print(sb);
     }
 }
