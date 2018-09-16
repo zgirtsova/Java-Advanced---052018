@@ -7,7 +7,7 @@ public class ListUtils {
     public ListUtils() {
     }
 
-    public static <T extends Comparable> T getMin(List<T> list){
+    public static <T extends Comparable<T>> T getMin(List<T> list){
         if (list.isEmpty()) {
             throw new IllegalArgumentException("Empty list!");
         }
@@ -20,7 +20,7 @@ public class ListUtils {
         return min;
     }
 
-    public static <T extends Comparable> T getMax(List<T> list){
+    public static <T extends Comparable<T>> T getMax(List<T> list){
         if (list.isEmpty()) {
             throw new IllegalArgumentException("Empty list!");
         }
