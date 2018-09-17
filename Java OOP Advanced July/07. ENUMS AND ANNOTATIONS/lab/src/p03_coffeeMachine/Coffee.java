@@ -1,5 +1,8 @@
 package p03_coffeeMachine;
 
+import p03_coffeeMachine.enums.CoffeeSize;
+import p03_coffeeMachine.enums.CoffeeType;
+
 public class Coffee {
 
     private CoffeeType type;

@@ -1,5 +1,9 @@
 package p03_coffeeMachine;
 
+import p03_coffeeMachine.enums.CoffeeSize;
+import p03_coffeeMachine.enums.CoffeeType;
+import p03_coffeeMachine.enums.Coin;
+
 import java.util.ArrayList;
 import java.util.List;
 
