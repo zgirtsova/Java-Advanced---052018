@@ -14,9 +14,7 @@ public class Main {
         try {
             Card card = new Card(cardRank, cardSuit);
 
-            System.out.println(String.format("Card name: %s; Card power: %d",
-                    card.toString(),
-                    card.getPower()));
+            System.out.println(card.toString());
         } catch (IllegalArgumentException ignored) {
             ;
         }

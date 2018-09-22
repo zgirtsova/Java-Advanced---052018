@@ -33,5 +33,6 @@ public class Player {
             }
         }
         return card;
+        //int max = this.handOfCards.stream().mapToInt(Card::getPower).max().getAsInt();
     }
 }

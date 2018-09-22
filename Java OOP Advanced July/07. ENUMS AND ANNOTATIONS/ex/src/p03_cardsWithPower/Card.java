@@ -2,38 +2,38 @@ package p03_cardsWithPower;
 
 public class Card {
 
-    private CardRank cardRank;
-    private CardSuits cardSuits;
+    private CardRank rank;
+    private CardSuits suits;
 
     public Card(String rank, String suit) {
-        this.setCardRank(rank);
-        this.setCardSuits(suit);
+        this.setRank(rank);
+        this.setSuits(suit);
     }
 
-    private void setCardRank(String cardRank) {
-        this.cardRank = Enum.valueOf(CardRank.class, cardRank.toUpperCase());
+    private void setRank(String rank) {
+        this.rank = Enum.valueOf(CardRank.class, rank.toUpperCase());
     }
 
-    private void setCardSuits(String cardSuits) {
-        this.cardSuits = Enum.valueOf(CardSuits.class, cardSuits.toUpperCase());
+    private void setSuits(String suits) {
+        this.suits = Enum.valueOf(CardSuits.class, suits.toUpperCase());
     }
 
-    public CardRank getCardRank() {
-        return this.cardRank;
+    public CardRank getRank() {
+        return this.rank;
     }
 
-    public CardSuits getCardSuits() {
-        return this.cardSuits;
+    public CardSuits getSuits() {
+        return this.suits;
     }
 
     public int getPower() {
-        return this.getCardRank().getPower() + this.getCardSuits().getPower();
+        return this.getRank().getPower() + this.getSuits().getPower();
     }
 
     @Override
     public String toString() {
         return String.format("%s of %s",
-                this.getCardRank().name(),
-                this.getCardSuits().name());
+                this.getRank().name(),
+                this.getSuits().name());
     }
 }

@@ -20,7 +20,7 @@ public class Main {
         }
     }
 
-    private static void getClassAnnotationInfo(Class<?> enumClass) {
+    private static <T> void getClassAnnotationInfo(Class<T> enumClass) {
         if (enumClass.isAnnotationPresent(CustomEnumAnnotation.class)) {
             CustomEnumAnnotation annotation = enumClass.getAnnotation(CustomEnumAnnotation.class);
 

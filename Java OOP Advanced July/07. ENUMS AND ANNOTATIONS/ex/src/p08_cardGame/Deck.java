@@ -29,8 +29,8 @@ public class Deck {
                 .anyMatch(c -> c.equals(card));
 
 //        return this.cards.stream().anyMatch(c ->
-//                c.getCardRank().name().equals(card.getCardRank().name()) &&
-//                        c.getCardSuits().name().equals(card.getCardSuits().name()));
+//                c.getRank().name().equals(card.getRank().name()) &&
+//                        c.getSuits().name().equals(card.getSuits().name()));
     }
 
     public void removeCard(Card card) {

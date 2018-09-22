@@ -32,8 +32,10 @@ public class Card {
 
     @Override
     public String toString() {
-        return String.format("%s of %s",
+        // Card name: TWO of CLUBS; Card power: 2
+        return String.format("Card name: %s of %s; Card power: %d",
                 this.getCardRank().name(),
-                this.getCardSuits().name());
+                this.getCardSuits().name(),
+                this.getPower());
     }
 }

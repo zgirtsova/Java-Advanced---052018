@@ -8,10 +8,10 @@ public class Main {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.println("Card Suits:");
-        for (CardSuits suits : CardSuits.values()) {
+        for (CardSuits suit : CardSuits.values()) {
             System.out.println(String.format("Ordinal value: %d; Name value: %s",
-                    suits.ordinal(),
-                    suits.name()));
+                    suit.ordinal(),
+                    suit.name()));
         }
     }
 }
