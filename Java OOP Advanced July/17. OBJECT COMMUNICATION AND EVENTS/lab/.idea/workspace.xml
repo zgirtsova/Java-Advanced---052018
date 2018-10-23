@@ -2,32 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5b470b8-73da-47e8-a47c-ab28a5db2b34" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Zoya.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/abstraction/AbstractHero.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/abstraction/Logger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/enums/LogType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/implementations/AttackCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/implementations/CombatLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/implementations/CommandExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/implementations/Dragon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/implementations/EventLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/implementations/Group.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/implementations/GroupAttackCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/implementations/GroupTargetCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/implementations/TargetCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/implementations/Warrior.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/interfaces/AttackGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/interfaces/Attacker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/interfaces/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/interfaces/Executor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/interfaces/Handler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/interfaces/Observer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/interfaces/Subject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/interfaces/Target.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../15. INTERFACE SEGREGATION, DEPENDENCY INVERSION PRINCIPLES/lab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../15. INTERFACE SEGREGATION, DEPENDENCY INVERSION PRINCIPLES/lab/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -56,6 +30,17 @@
           <entry key="JAVA" value="4" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.php.composer.command.options" />
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+      <usages-collector id="statistics.spring.boot.run.usages" />
+      <usages-collector id="statistics.file.types.edit" />
+      <usages-collector id="statistics.php.new.class" />
+      <usages-collector id="statistics.php.new.test" />
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.php.rename.constructor" />
+      <usages-collector id="statistics.php.composer.actions" />
+      <usages-collector id="statistics.file.extensions.edit" />
+      <usages-collector id="statistics.vcs.git.usages" />
     </session>
   </component>
   <component name="FileEditorManager">
@@ -137,7 +122,10 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
     <option name="y" value="2" />
     <option name="width" value="1378" />
@@ -212,7 +200,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540137836152" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540138023183" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files (x86)/Node.js/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -267,15 +255,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540137708659</updated>
-      <workItem from="1540137711491" duration="309000" />
+      <workItem from="1540137711491" duration="707000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="309000" />
+    <option name="totallyTimeSpent" value="707000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="2" width="1378" height="733" extended-state="1" />
+    <frame x="-7" y="2" width="1378" height="733" extended-state="0" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
@@ -358,9 +346,80 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>8.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>lab</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>8.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>
